@@ -51,9 +51,6 @@ Users should be able to:
 
 I've learned how to use CSS Custom properties partially. 
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 Declaring global variables 
 ```css
 :root {
@@ -105,8 +102,6 @@ $(document).ready(function(){
 
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 In my future projecs, I'd like to write a readable and qualitative code. ALso, I'll develop my cosing skills and use the new knowledge/skills in my future works.
 
