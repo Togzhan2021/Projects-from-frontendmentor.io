@@ -19,7 +19,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat-y: no-repeat;
   background-color: var(--veryPaleBlue);
@@ -151,7 +151,10 @@ body {
   font-weight: 900;
 }
 
-.wrapper h3, .wrapper p, .wrapper button, .wrapper .cancel {
+.wrapper h3,
+.wrapper p,
+.wrapper button,
+.wrapper .cancel {
   text-align: center;
 }
 
