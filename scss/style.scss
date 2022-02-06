@@ -1,0 +1,142 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+$transparentWhite: hsla(0, 0%, 100%, 0.75);
+$veryLightGray: hsl(0, 0%, 95%);
+
+@mixin changeBgColor($bgcolor){
+	background-color: $bgcolor;
+}
+
+@mixin changeColor($color){
+	color: $color;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: $veryLightGray;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: "Lexend Deca", sans-serif;
+	font-size: 15px;
+}
+
+.attribution{
+	margin-top: 25px;
+}
+
+.main{
+	box-shadow: 11px -4px 10px -4px rgba(0,0,0,0.1),-19px -12px 30px -10px rgba(0,0,0,0.1),3px 17px 15px -3px rgba(0,0,0,0.1);;
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	overflow: auto;
+	padding: 50px;
+}
+
+
+.section{
+	
+	height: 460px;
+	padding: 40px;
+	display: grid;
+	
+//	grid-template-rows: 80px 70px minmax(10px, 200px) 40px;
+
+	&.sedans{
+		border-radius: 10px 0 0 10px;
+		@include changeBgColor($brightOrange);
+
+		& button{
+			@include changeColor($brightOrange);
+		}
+	}
+	&.suvs{
+		@include changeBgColor($darkCyan);
+
+		& button{
+			@include changeColor($darkCyan);
+		}
+	}
+
+	&.luxury{
+		border-radius: 0 10px 10px 0;
+		@include changeBgColor($veryDarkCyan);
+
+		& button{
+			@include changeColor($veryDarkCyan);
+		}
+	}
+	button{
+		@include changeBgColor($veryLightGray);
+	}
+
+	&__icon{
+		background-image: url('../images/');
+	}
+
+	&__header{
+		text-transform: uppercase;
+		color: $veryLightGray;
+		font-size: 28px;
+		font-family: "Big Shoulders Display", sans-serif;
+
+	}
+
+	&__text{
+		color: $transparentWhite;
+	}
+
+	&__button{
+		width: 150px;
+		height: 40px;
+		background-color: $veryLightGray;
+		border: none;
+		border-radius: 20px;
+		font-weight: 600;
+		cursor: pointer;
+		margin-top: 30px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&:hover {
+		border: 1px solid #c5c5c5;
+		box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+		z-index: 500;
+	  }
+	
+}
+
+@media (max-width: 768px){
+	.main{
+		padding: 20px;
+	}
+
+	.section{
+		height: 400px;
+		padding: 30px;
+	}
+}
+
+@media (max-width: 875px){
+	.section {
+		&.sedans, 	&.luxury{
+			border-radius: 0;
+		}
+}
+}
